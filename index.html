@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>OffGridPai | Solar, Water & Land in Pai Thailand</title>
+<meta name="description" content="Off-grid solar, water systems, and rural land solutions in Pai Thailand.">
+
+<style>
+:root{--primary:#0B3C5D;--accent:#1E90FF;--sun:#FDB813;}
+body{margin:0;font-family:Inter,Arial;background:#f5f7fa;color:#222;}
+
+header{height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;color:white;background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),url('hero.jpg') center/cover;}
+
+.logo{width:140px;margin-bottom:20px;}
+
+h1{font-size:3rem;margin-bottom:10px;}
+
+.btn{padding:10px 20px;border-radius:50px;text-decoration:none;margin:6px;display:inline-block;font-weight:bold;font-size:0.9rem;}
+.btn-wa{background:#25D366;color:white;}
+.btn-line{background:#00C300;color:white;}
+
+.section{padding:70px 20px;max-width:1100px;margin:auto;}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;}
+.card{background:white;padding:20px;border-radius:14px;box-shadow:0 8px 20px rgba(0,0,0,.08);} 
+
+img{width:100%;border-radius:12px;}
+
+.cta{background:var(--primary);color:white;text-align:center;padding:70px 20px;} 
+footer{background:#000;color:#aaa;text-align:center;padding:30px;} 
+
+.sticky{position:fixed;bottom:15px;right:15px;display:flex;flex-direction:column;gap:8px;} 
+.sticky a{padding:10px 14px;border-radius:40px;color:white;text-decoration:none;font-size:0.85rem;} 
+.whatsapp{background:#25D366;} .line{background:#00C300;} 
+
+.lang{position:fixed;top:15px;left:15px;background:white;padding:6px 12px;border-radius:20px;cursor:pointer;font-size:0.85rem;font-weight:bold;} 
+
+</style>
+</head>
+
+<body>
+
+<div class="lang" onclick="toggleLang()">EN / TH</div>
+
+<header>
+<img src="logo.png" class="logo">
+<h1 id="title"></h1>
+<p id="sub"></p>
+<a href="https://wa.me/66922864775" class="btn btn-wa">WhatsApp</a>
+<a href="https://line.me/ti/p/~66922864775" class="btn btn-line">LINE</a>
+</header>
+
+<section class="section">
+<h2 id="solar-title"></h2>
+<img src="solar-packages.jpg">
+<p id="solar-text"></p>
+</section>
+
+<section class="section">
+<h2 id="land-title"></h2>
+<div class="grid">
+<div class="card" id="land1"></div>
+<div class="card" id="land2"></div>
+<div class="card" id="land3"></div>
+</div>
+</section>
+
+<section class="section">
+<h2 id="water-title"></h2>
+<p id="water-text"></p>
+</section>
+
+<section class="section">
+<h2 id="property-title"></h2>
+<p id="property-text"></p>
+<a href="#" class="btn btn-wa" id="property-btn"></a>
+</section>
+
+<section class="section">
+<h2 id="blog-title"></h2>
+<div class="grid">
+<div class="card" id="blog1"></div>
+<div class="card" id="blog2"></div>
+<div class="card" id="blog3"></div>
+<div class="card" id="blog4"></div>
+</div>
+</section>
+
+<section class="cta">
+<h2 id="cta-title"></h2>
+<a href="https://wa.me/66922864775" class="btn btn-wa" id="cta-btn"></a>
+</section>
+
+<footer>
+<p id="footer"></p>
+</footer>
+
+<div class="sticky">
+<a href="https://wa.me/66922864775" class="whatsapp">WA</a>
+<a href="https://line.me/ti/p/~66922864775" class="line">LINE</a>
+</div>
+
+<script>
+const content = {
+  en: {
+    title: "Build Your Off-Grid Life in Pai",
+    sub: "Solar, water & jungle land solutions in Pai Thailand",
+    solarTitle: "Solar Packages",
+    solarText: "Custom systems designed for Pai terrain and off-grid living.",
+    landTitle: "Rural Land & Jungle Homes",
+    land1: "We help you find land in Pai",
+    land2: "Off-grid ready homes",
+    land3: "Perfect for farms & resorts",
+    waterTitle: "Water Independence",
+    waterText: "Well drilling and solar pump systems for jungle land.",
+    propertyTitle: "List Your Property",
+    propertyText: "Have land in Pai? Connect with serious buyers.",
+    propertyBtn: "Submit Property",
+    blogTitle: "Blog",
+    blog1: "Buying land in Pai Thailand",
+    blog2: "Off-grid living cost Thailand",
+    blog3: "Solar vs grid in rural Thailand",
+    blog4: "Water systems for jungle land",
+    ctaTitle: "Start Your Off-Grid Setup",
+    ctaBtn: "Contact Now",
+    footer: "OffGridPai | Solar • Water • Land | Pai Thailand"
+  },
+  th: {
+    title: "เริ่มต้นชีวิตออฟกริดในปาย",
+    sub: "โซลาร์ น้ำ และที่ดินในป่า ปาย",
+    solarTitle: "แพ็กเกจโซลาร์",
+    solarText: "ออกแบบระบบให้เหมาะกับพื้นที่ปาย",
+    landTitle: "ที่ดินและบ้านในป่า",
+    land1: "ช่วยคุณหาที่ดินในปาย",
+    land2: "บ้านพร้อมระบบออฟกริด",
+    land3: "เหมาะสำหรับฟาร์มและรีสอร์ท",
+    waterTitle: "ระบบน้ำอิสระ",
+    waterText: "บริการเจาะบ่อและปั๊มน้ำโซลาร์",
+    propertyTitle: "ลงประกาศที่ดิน",
+    propertyText: "มีที่ดินในปาย? ติดต่อเรา",
+    propertyBtn: "ส่งข้อมูลที่ดิน",
+    blogTitle: "บทความ",
+    blog1: "ซื้อที่ดินในปาย",
+    blog2: "ค่าใช้จ่ายออฟกริด",
+    blog3: "โซลาร์ vs ไฟฟ้า",
+    blog4: "ระบบน้ำสำหรับที่ดิน",
+    ctaTitle: "เริ่มต้นระบบออฟกริด",
+    ctaBtn: "ติดต่อเรา",
+    footer: "OffGridPai | โซลาร์ น้ำ ที่ดิน ปาย"
+  }
+};
+
+let current = 'en';
+
+function setLang(lang){
+  const c = content[lang];
+  document.getElementById('title').innerText = c.title;
+  document.getElementById('sub').innerText = c.sub;
+  document.getElementById('solar-title').innerText = c.solarTitle;
+  document.getElementById('solar-text').innerText = c.solarText;
+  document.getElementById('land-title').innerText = c.landTitle;
+  document.getElementById('land1').innerText = c.land1;
+  document.getElementById('land2').innerText = c.land2;
+  document.getElementById('land3').innerText = c.land3;
+  document.getElementById('water-title').innerText = c.waterTitle;
+  document.getElementById('water-text').innerText = c.waterText;
+  document.getElementById('property-title').innerText = c.propertyTitle;
+  document.getElementById('property-text').innerText = c.propertyText;
+  document.getElementById('property-btn').innerText = c.propertyBtn;
+  document.getElementById('blog-title').innerText = c.blogTitle;
+  document.getElementById('blog1').innerText = c.blog1;
+  document.getElementById('blog2').innerText = c.blog2;
+  document.getElementById('blog3').innerText = c.blog3;
+  document.getElementById('blog4').innerText = c.blog4;
+  document.getElementById('cta-title').innerText = c.ctaTitle;
+  document.getElementById('cta-btn').innerText = c.ctaBtn;
+  document.getElementById('footer').innerText = c.footer;
+}
+
+function toggleLang(){
+  current = current === 'en' ? 'th' : 'en';
+  setLang(current);
+}
+
+// default load English
+setLang('en');
+</script>
+
+</body>
+</html>
