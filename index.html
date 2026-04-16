@@ -1,119 +1,134 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <!-- SEO Title & Description -->
   <title>OffGridPai | Solar Power & Water Solutions in Pai, Thailand</title>
   <meta name="description" content="Off-grid solar power systems, water well drilling, and rural land solutions in Pai, Thailand. Professional solar packages for jungle homes and farms.">
   
-  <!-- Keywords -->
-  <meta name="keywords" content="off grid solar Pai, solar power Pai Thailand, off grid living Pai, solar panels Pai, water well drilling Pai, jungle home Pai, offgrid Pai">
-  
-  <!-- Open Graph / Social Sharing -->
   <meta property="og:title" content="OffGridPai - Solar & Water Solutions in Pai, Thailand">
   <meta property="og:description" content="Build your dream off-grid home in Pai with reliable solar power and water systems.">
-  <meta property="og:image" content="https://paithailand.github.io/offgridpai/hero.jpg">
+  <meta property="og:image" content="https://paithailand.github.io/offgridpai/og-image.jpg">
   <meta property="og:url" content="https://paithailand.github.io/offgridpai">
   <meta property="og:type" content="website">
-
-  <!-- Sitemap Link -->
-  <link rel="sitemap" type="application/xml" href="https://paithailand.github.io/offgridpai/sitemap.xml">
 
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
   
   <style>
     .hero-bg { 
-      background-image: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.55)), url('hero.jpg'); 
+      background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6)), url('hero.jpg'); 
       background-size: cover;
       background-position: center;
     }
+    /* Smooth hover effect for your custom feature graphics */
+    .feature-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .feature-card:hover {
+      transform: translateY(-5px);
+    }
   </style>
 </head>
-<body class="font-sans">
+<body class="font-sans text-gray-900 bg-white">
 
-  <!-- Navbar -->
   <nav class="bg-white shadow-md sticky top-0 z-50">
-    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-      <img src="logo.png" alt="OffGridPai Logo - Solar Solutions Pai Thailand" class="h-12">
-      <div class="hidden md:flex gap-8 text-lg">
-        <a href="#packages" class="hover:text-amber-600">Solar Packages</a>
-        <a href="#features" class="hover:text-amber-600">Solutions</a>
-        <a href="#contact" class="hover:text-amber-600">Contact</a>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex justify-between items-center">
+      
+      <div class="flex items-center gap-4">
+        <a href="#"><img src="logo.png" alt="OffGridPai Logo" class="h-10 md:h-12"></a>
+        
+        <div class="flex items-center bg-gray-100 rounded-full p-1 text-[10px] md:text-xs font-bold border border-gray-200">
+          <span class="px-3 py-1 bg-white shadow-sm rounded-full text-amber-600">EN</span>
+          <a href="index-th.html" class="px-3 py-1 text-gray-500 hover:text-amber-600 transition uppercase">TH</a>
+        </div>
       </div>
-      <a href="https://wa.me/66922864775" target="_blank" class="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-full flex items-center gap-2">
-        <i class="fab fa-whatsapp"></i> WhatsApp
+
+      <div class="hidden md:flex gap-8 text-lg font-medium">
+        <a href="#packages" class="hover:text-amber-600 transition">Packages</a>
+        <a href="#features" class="hover:text-amber-600 transition">Solutions</a>
+        <a href="#contact" class="hover:text-amber-600 transition">Contact</a>
+      </div>
+
+      <a href="https://wa.me/66922864775" target="_blank" class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 md:px-6 md:py-3 rounded-full flex items-center gap-2 text-sm md:text-base font-bold shadow-lg">
+        <i class="fab fa-whatsapp"></i> <span class="hidden xs:inline">WhatsApp</span>
       </a>
     </div>
   </nav>
 
-  <!-- Hero -->
-  <section class="hero-bg h-screen bg-cover bg-center flex items-center text-white">
-    <div class="max-w-7xl mx-auto px-6 text-center">
-      <h1 class="text-5xl md:text-7xl font-bold mb-6">Off-Grid Solar Power in Pai, Thailand</h1>
-      <p class="text-2xl md:text-3xl mb-10">Professional Solar & Water Solutions for Jungle Homes and Farms</p>
-      <a href="#packages" class="inline-block bg-amber-500 hover:bg-amber-600 text-white text-xl px-10 py-5 rounded-full font-semibold">
+  <section class="hero-bg min-h-[70vh] flex items-center text-white px-6">
+    <div class="max-w-4xl mx-auto text-center">
+      <h1 class="text-4xl md:text-7xl font-bold mb-4 leading-tight">Off-Grid Solar <br class="hidden md:block"> in Pai, Thailand</h1>
+      <p class="text-lg md:text-2xl mb-8 text-gray-100 italic">Professional Solar & Water Solutions for Jungle Homes and Farms</p>
+      <a href="#packages" class="inline-block bg-amber-500 hover:bg-amber-600 text-white text-lg md:text-xl px-10 py-5 rounded-full font-bold transition-transform hover:scale-105">
         View Solar Packages
       </a>
     </div>
   </section>
 
-  <!-- Solar Packages -->
-  <section id="packages" class="py-20 bg-gray-50">
+  <section id="features" class="py-16 bg-white">
     <div class="max-w-7xl mx-auto px-6">
-      <h2 class="text-4xl font-bold text-center mb-4">Solar Packages for Pai</h2>
-      <p class="text-center text-gray-600 mb-12">Reliable off-grid solar systems designed for Northern Thailand</p>
-      <img src="solar-packages.jpg" alt="Solar Packages for off-grid homes in Pai Thailand" class="w-full rounded-2xl shadow-2xl">
-    </div>
-  </section>
-
-  <!-- Features -->
-  <section id="features" class="py-20">
-    <div class="max-w-7xl mx-auto px-6">
-      <h2 class="text-4xl font-bold text-center mb-12">Why Choose OffGridPai?</h2>
-      <div class="grid md:grid-cols-4 gap-8">
-        <div class="text-center">
-          <img src="feature-solar.jpg" alt="Solar Power Systems Pai Thailand" class="w-full h-64 object-cover rounded-2xl mb-4">
-          <h3 class="text-xl font-semibold">Solar Power</h3>
-          <p class="text-gray-600">Clean reliable energy for off-grid living in Pai</p>
-        </div>
-        <div class="text-center">
-          <img src="feature-water.jpg" alt="Water Well Drilling and Solutions Pai Thailand" class="w-full h-64 object-cover rounded-2xl mb-4">
-          <h3 class="text-xl font-semibold">Water Independence</h3>
-          <p class="text-gray-600">Well drilling, pumps & water systems</p>
-        </div>
-        <div class="text-center">
-          <img src="feature-land.jpg" alt="Rural Land and Jungle Homes Pai Thailand" class="w-full h-64 object-cover rounded-2xl mb-4">
-          <h3 class="text-xl font-semibold">Rural Land & Homes</h3>
-          <p class="text-gray-600">Find and develop land in Pai</p>
-        </div>
-        <div class="text-center">
-          <img src="feature-living.jpg" alt="Off Grid Living Pai Thailand" class="w-full h-64 object-cover rounded-2xl mb-4">
-          <h3 class="text-xl font-semibold">Sustainable Living</h3>
-          <p class="text-gray-600">Live in harmony with nature in Northern Thailand</p>
-        </div>
+      <h2 class="text-3xl md:text-4xl font-bold text-center mb-4 uppercase tracking-wide">Our Core Solutions</h2>
+      <p class="text-center text-gray-600 mb-12">Expertly integrated systems for total independence</p>
+      
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="feature-card"><img src="feature-solar.jpg" alt="Solar Power" class="w-full rounded-2xl shadow-md"></div>
+        <div class="feature-card"><img src="feature-water.jpg" alt="Water Solutions" class="w-full rounded-2xl shadow-md"></div>
+        <div class="feature-card"><img src="feature-land.jpg" alt="Rural Land Development" class="w-full rounded-2xl shadow-md"></div>
+        <div class="feature-card"><img src="feature-living.jpg" alt="Off-Grid Living" class="w-full rounded-2xl shadow-md"></div>
       </div>
     </div>
   </section>
 
-  <!-- Contact -->
+  <section id="packages" class="py-16 bg-gray-50">
+    <div class="max-w-5xl mx-auto px-4 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4 uppercase">Solar Packages for Pai</h2>
+      <p class="mb-10 text-gray-600 italic">Reliable energy systems sized for Northern Thailand terrain</p>
+      <img src="solar-packages.jpg" alt="Solar Pricing Packages" class="w-full h-auto rounded-3xl shadow-2xl border-4 border-white">
+    </div>
+  </section>
+
+  <section class="bg-sky-950 text-white py-12">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+      <div class="flex flex-col items-center gap-3">
+        <i class="fas fa-shield-alt text-3xl text-sky-200"></i>
+        <h4 class="font-bold text-sm md:text-lg">LOCAL EXPERTS</h4>
+      </div>
+      <div class="flex flex-col items-center gap-3">
+        <i class="fas fa-tools text-3xl text-sky-200"></i>
+        <h4 class="font-bold text-sm md:text-lg">QUALITY EQUIPMENT</h4>
+      </div>
+      <div class="flex flex-col items-center gap-3">
+        <i class="fas fa-heart text-3xl text-sky-200"></i>
+        <h4 class="font-bold text-sm md:text-lg">AFTER-SALES SUPPORT</h4>
+      </div>
+      <div class="flex flex-col items-center gap-3">
+        <i class="fas fa-leaf text-3xl text-sky-200"></i>
+        <h4 class="font-bold text-sm md:text-lg">SUSTAINABLE FUTURE</h4>
+      </div>
+    </div>
+  </section>
+
   <section id="contact" class="bg-emerald-900 text-white py-20">
     <div class="max-w-4xl mx-auto text-center px-6">
-      <h2 class="text-4xl font-bold mb-6">Ready to Go Off-Grid in Pai?</h2>
-      <p class="text-xl mb-10">Local experts in solar, water & land development</p>
+      <h2 class="text-4xl font-bold mb-4">Start Your Off-Grid Journey</h2>
+      <p class="text-xl text-emerald-100 mb-12">Contact us today for a free consultation and site visit in Pai.</p>
       
-      <div class="flex flex-col sm:flex-row gap-6 justify-center">
-        <a href="https://wa.me/66922864775" target="_blank" class="bg-green-500 hover:bg-green-600 px-10 py-5 rounded-2xl text-2xl flex items-center justify-center gap-3">
-          <i class="fab fa-whatsapp text-3xl"></i> WhatsApp +66 92 286 4775
+      <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
+        <a href="https://wa.me/66922864775" target="_blank" class="w-full sm:w-auto bg-green-500 hover:bg-green-600 px-10 py-5 rounded-2xl text-2xl font-bold flex items-center justify-center gap-3 transition-transform hover:scale-105 shadow-xl">
+          <i class="fab fa-whatsapp text-3xl"></i> WhatsApp
         </a>
-        <a href="https://line.me/ti/p/@offgridpai" target="_blank" class="bg-green-600 hover:bg-green-700 px-10 py-5 rounded-2xl text-2xl flex items-center justify-center gap-3">
+        <a href="https://line.me/ti/p/@offgridpai" target="_blank" class="w-full sm:w-auto bg-green-600 hover:bg-green-700 px-10 py-5 rounded-2xl text-2xl font-bold flex items-center justify-center gap-3 transition-transform hover:scale-105 shadow-xl">
           <i class="fab fa-line text-3xl"></i> LINE @offgridpai
         </a>
       </div>
     </div>
   </section>
+
+  <footer class="bg-emerald-950 text-emerald-500 py-6 text-center text-sm">
+    &copy; 2024 OffGridPai. All rights reserved. Pai, Mae Hong Son, Thailand.
+  </footer>
 
 </body>
 </html>
